@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-[var(--primary)] text-white">
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-lg sm:text-xl font-bold">LeatherCraft</h3>
@@ -14,7 +14,7 @@ const Footer = () => {
               Premium handcrafted leather jackets and accessories. Quality materials, timeless designs.
             </p>
             <div className="flex space-x-4">
-<a href="#" className="text-gray-300 hover:text-[var(--accent)] transition-colors">
+              <a href="#" className="text-gray-300 hover:text-[var(--accent)] transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-300 hover:text-[var(--accent)] transition-colors">
@@ -32,6 +32,9 @@ const Footer = () => {
             <div className="space-y-2">
               <Link to="/about" className="block text-sm sm:text-base text-gray-300 hover:text-[var(--accent)] transition-colors">
                 About Us
+              </Link>
+              <Link to="/work" className="block text-sm sm:text-base text-gray-300 hover:text-[var(--accent)] transition-colors">
+                Our Work
               </Link>
               <Link to="/gallery" className="block text-sm sm:text-base text-gray-300 hover:text-[var(--accent)] transition-colors">
                 Gallery
