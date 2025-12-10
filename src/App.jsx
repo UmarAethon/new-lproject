@@ -14,6 +14,7 @@ import Checkout from './pages/Checkout';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
 import Reviews from './pages/Reviews';
+import Work from './pages/Work';
 import './App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/reviews" element={<Reviews />} />
+              <Route path="/work" element={<Work />} />
             </Routes>
           </main>
           <Footer />
