@@ -64,11 +64,11 @@ const Header = () => {
                       <div key={subcat} className="px-4 py-2">
                         <Link
                           to={`/products/${category.toLowerCase()}-${subcat.toLowerCase()}`}
-                          className="block text-sm font-semibold text-[var(--primary)] hover:text-[var(--accent)] mb-2transition-colors"
+                          className="block text-sm font-semibold text-[var(--primary)] hover:text-[var(--accent)] mb-2 transition-colors"
                         >
                           {subcat}
                         </Link>
-<div className="grid grid-cols-2 gap-1">
+                        <div className="grid grid-cols-2 gap-1">
                           {items.map(item => (
                             <Link
                               key={item}
@@ -85,6 +85,17 @@ const Header = () => {
                 )}
               </div>
             ))}
+            
+            <Link
+              to="/work"
+              className={`font-medium transition-colors ${
+                isActiveLink('/work') 
+                  ? 'text-[var(--accent)]' 
+                  : 'text-gray-700 hover:text-[var(--primary)]'
+              }`}
+            >
+              Our Work
+            </Link>
             
             <Link
               to="/custom-order"
@@ -121,14 +132,14 @@ const Header = () => {
           </nav>
 
           {/* Right Side */}
-          <div className="flex items-center space-x-3sm:space-x-4">
+          <div className="flex items-center space-x-3 sm:space-x-4">
             <CurrencySelector />
             
             <Link
               to="/cart"
               className="relative p-2 text-gray-700 hover:text-[var(--primary)] transition-colors"
             >
-              <ShoppingBag className="w-5 h-5sm:w-6 sm:h-6" />
+              <ShoppingBag className="w-5 h-5 sm:w-6 sm:h-6" />
               {getTotalItems() > 0 && (
                 <span className="absolute -top-1 -right-1 bg-[var(--accent)] text-[var(--primary)] text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                   {getTotalItems()}
@@ -181,6 +192,13 @@ const Header = () => {
             ))}
             
             <div className="border-t pt-4 space-y-2">
+              <Link
+                to="/work"
+                className="block font-medium text-gray-700 hover:text-[var(--primary)]"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Our Work
+              </Link>
               <Link
                 to="/custom-order"
                 className="block font-medium text-gray-700 hover:text-[var(--primary)]"
