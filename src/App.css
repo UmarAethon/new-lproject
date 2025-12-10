@@ -1,0 +1,52 @@
+:root {
+  --primary: #3E2723;
+  --secondary: #EFEBE9;
+  --accent: #FFD700;
+  --background: #F5F5F5;
+  --text: #212121;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.6));
+}
+
+.product-card-shadow {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card-shadow:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-transition {
+  transition: transform 0.5s ease-in-out;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--primary);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #E6C200;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--primary);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #2E1B18;
+  transform: translateY(-2px);
+}
+
+.input-focus:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
